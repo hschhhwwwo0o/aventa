@@ -10,7 +10,7 @@ Aventa, an app for kids to better control their financial goals.
 - **[SQLite]** - SQLite is a C-language library that implements a small, fast, self-contained, high-reliability,
   full-featured, SQL database engine.
 
-## Desugn
+## Design
 
 Icons to take from [IconIcons]
 
