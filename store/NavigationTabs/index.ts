@@ -2,7 +2,7 @@ import { makeAutoObservable } from "mobx";
 
 class NavigationTabs {
   public isVisible: boolean = false;
-  public navigate: any;
+  public navigate: INavigation["navigate"] | undefined;
 
   constructor() {
     makeAutoObservable(this);
@@ -12,8 +12,8 @@ class NavigationTabs {
     this.navigate = navigate;
   }
 
-  public setIsVisible(value: boolean): void {
-    this.isVisible = value;
+  public setIsVisible(isVisible: boolean): void {
+    this.isVisible = isVisible;
   }
 }
 
