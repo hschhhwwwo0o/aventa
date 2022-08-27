@@ -7,7 +7,7 @@ import { BGLayout } from "@layouts/BGLayout";
 import { useInitializeNavigationTabs } from "@hooks/navigation/useInitializeNavigationTabs";
 import { useNavigationTabs } from "@hooks/navigation/useNavigationTabs";
 
-function EmptyScreen({ navigation, route }: IScreen): JSX.Element {
+function InitializeScreen({ navigation, route }: IScreen): JSX.Element {
   useInitializeNavigationTabs(navigation.navigate);
   useNavigationTabs(false);
 
@@ -18,4 +18,4 @@ function EmptyScreen({ navigation, route }: IScreen): JSX.Element {
   );
 }
 
-export { EmptyScreen };
+export { InitializeScreen };

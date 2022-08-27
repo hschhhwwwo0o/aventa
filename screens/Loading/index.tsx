@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-function LoadingScreen() {
+function LoadingScreen({ navigation, route }: IScreen): JSX.Element {
   return <Fragment></Fragment>;
 }
 

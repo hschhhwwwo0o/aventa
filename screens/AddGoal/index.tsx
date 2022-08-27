@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-function AddGoalScreen() {
+function AddGoalScreen({ navigation, route }: IScreen): JSX.Element {
   return <Fragment></Fragment>;
 }
 

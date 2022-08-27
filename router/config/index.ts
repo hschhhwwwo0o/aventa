@@ -1,19 +1,19 @@
 import { IRoute } from "./types";
 
 /** Screens */
+import { InitializeScreen } from "@screens/Initialize";
 import { MainScreen } from "@screens/Main";
 import { AboutScreen } from "@screens/About";
-import { EmptyScreen } from "@screens/Empty";
 
-const INITIAL_ROUTE_NAME = "EmptyScreen";
+const INITIAL_ROUTE_NAME: string = "InitializeScreen";
 
 const routes: IRoute[] = [
-  { name: "EmptyScreen", component: EmptyScreen },
+  { name: "InitializeScreen", component: InitializeScreen },
   { name: "MainScreen", component: MainScreen },
   { name: "About", component: AboutScreen },
 ];
 
-const initialRoute =
+const initialRoute: IRoute =
   routes.find(function findInitialScreen(route) {
     return route.name === INITIAL_ROUTE_NAME;
   }) || routes[0];

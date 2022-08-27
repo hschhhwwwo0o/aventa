@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-function WelcomeInitialScreen() {
+function WelcomeInitialScreen({ navigation, route }: IScreen): JSX.Element {
   return <Fragment></Fragment>;
 }
 

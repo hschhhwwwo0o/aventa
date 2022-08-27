@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-function WelcomeConceptScreen() {
+function WelcomeConceptScreen({ navigation, route }: IScreen): JSX.Element {
   return <Fragment></Fragment>;
 }
 
