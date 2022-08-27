@@ -4,14 +4,16 @@ import { Fragment } from "react";
 import { BGLayout } from "@layouts/BGLayout";
 
 /** Hooks */
+import { useInitializeNavigationTabs } from "@hooks/navigation/useInitializeNavigationTabs";
 import { useNavigationTabs } from "@hooks/navigation/useNavigationTabs";
 
-function EmptyScreen(): JSX.Element {
+function EmptyScreen({ navigation, route }: IScreen): JSX.Element {
+  useInitializeNavigationTabs(navigation.navigate);
   useNavigationTabs(false);
 
   return (
     <Fragment>
-      <BGLayout></BGLayout>
+      <BGLayout />
     </Fragment>
   );
 }

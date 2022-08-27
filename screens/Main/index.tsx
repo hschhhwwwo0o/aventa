@@ -6,7 +6,7 @@ import { BGLayout } from "@layouts/BGLayout";
 /** Hooks */
 import { useNavigationTabs } from "@hooks/navigation/useNavigationTabs";
 
-function MainScreen(): JSX.Element {
+function MainScreen({ navigation, route }: IScreen): JSX.Element {
   useNavigationTabs(true);
 
   return (
