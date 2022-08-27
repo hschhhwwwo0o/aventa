@@ -10,13 +10,27 @@ import { Router } from "@router/index";
 /** Styles */
 import AndroidSafeArea from "@styles/AndroidSafeArea";
 
-export default function App() {
+/** Global Components */
+import NavigationTabs from "@components/global/NavigationTabs";
+
+export default function App(): JSX.Element {
   return (
     <Fragment>
       <StatusBar style="auto" />
-      <SafeAreaView style={AndroidSafeArea.container}>
-        <Router />
-      </SafeAreaView>
+      {
+        /** Screen body */
+        <Fragment>
+          <SafeAreaView style={AndroidSafeArea.container}>
+            <Router />
+          </SafeAreaView>
+        </Fragment>
+      }
+      {
+        /** Navigation bar for switching tabs */
+        <Fragment>
+          <NavigationTabs />
+        </Fragment>
+      }
     </Fragment>
   );
 }
