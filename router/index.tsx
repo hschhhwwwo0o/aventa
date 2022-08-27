@@ -5,7 +5,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 /** Routes */
-import { routes } from "./config";
+import { initialRoute, routes } from "./config";
 
 function Router() {
   const Stack = createNativeStackNavigator();
@@ -13,7 +13,7 @@ function Router() {
   return (
     <Fragment>
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator initialRouteName={initialRoute.name}>
           {routes.map(function initializeRoutes(route): JSX.Element {
             return (
               <Stack.Screen
