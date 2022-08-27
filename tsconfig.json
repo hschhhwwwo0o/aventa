@@ -24,6 +24,7 @@
       "@icons/*": ["icons/*"],
       "@localization/*": ["localization/*"],
       "@layouts/*": ["layouts/*"],
+      "@styles/*": ["styles/*"],
     }
   }
 }

@@ -21,6 +21,7 @@ module.exports = function (api) {
             "@layouts": "./layouts",
             "@types": "./types",
             "@localization": "./localization",
+            "@styles": "./styles",
           },
         },
       ],
