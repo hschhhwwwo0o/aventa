@@ -20,7 +20,14 @@ const SELECTABLE_COLORS = {
   paleBrown: "#FFA688",
 };
 
+const GRADIENTS = {
+  brand: ["#CD75CF", "#FFA688"],
+  yellow: ["#FFA53F", "#FFA688"],
+  orange: ["#FFA53F", "#BE4141"],
+};
+
 Object.freeze(COLORS);
+Object.freeze(GRADIENTS);
 Object.freeze(SELECTABLE_COLORS);
 
 export { COLORS, SELECTABLE_COLORS };
