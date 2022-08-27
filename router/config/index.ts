@@ -12,7 +12,7 @@ import { WelcomeConceptScreen } from "@screens/Welcome/Concept";
 import { WelcomeMeetScreen } from "@screens/Welcome/Meet";
 import { WelcomeAddGoalScreen } from "@screens/Welcome/AddGoal";
 
-/** Applization routes */
+/** Application routes */
 const routes: IRoute[] = [
   /** Init screen */
   { name: "InitializeScreen", component: InitializeScreen },
@@ -25,10 +25,10 @@ const routes: IRoute[] = [
   { name: "AboutScreen", component: AboutScreen },
 
   /** Welcome screens */
-  { name: "WelcomeInitialScreen", component: WelcomeInitialScreen },
-  { name: "WelcomeConceptScreen", component: WelcomeConceptScreen },
-  { name: "WelcomeMeetScreen", component: WelcomeMeetScreen },
-  { name: "WelcomeAddGoalScreen", component: WelcomeAddGoalScreen },
+  { name: "Welcome/InitialScreen", component: WelcomeInitialScreen },
+  { name: "Welcome/ConceptScreen", component: WelcomeConceptScreen },
+  { name: "Welcome/MeetScreen", component: WelcomeMeetScreen },
+  { name: "Welcome/AddGoalScreen", component: WelcomeAddGoalScreen },
 ];
 
 /** Application preloading screen name */
