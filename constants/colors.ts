@@ -7,6 +7,8 @@ const COLORS = {
   paleRed: "#E34E4E",
   purple: "#FC7CFF",
   palePurple: "#CD75CF",
+  bg: "#050505",
+  lowGray: "#4B4B4B",
 };
 
 const SELECTABLE_COLORS = {

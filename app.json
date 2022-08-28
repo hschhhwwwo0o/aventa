@@ -1,15 +1,15 @@
 {
   "expo": {
-    "name": "aventa",
-    "slug": "aventa",
+    "name": "Aventa",
+    "slug": "Aventa",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "icon": "./assets/meta/icon.png",
+    "userInterfaceStyle": "dark",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/meta/splash-screen.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#050505"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -20,12 +20,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "foregroundImage": "./assets/meta/adaptive-icon.png",
+        "backgroundColor": "#050505"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/meta/favicon.png"
     }
   }
 }
