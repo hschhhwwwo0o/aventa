@@ -1,4 +1,4 @@
-import SQLite from "expo-sqlite";
+import * as SQLite from "expo-sqlite";
 
 const SQLiteDatabase: SQLite.WebSQLDatabase = (function initializeDatabase(): SQLite.WebSQLDatabase {
   const name: string = "AventaSQLiteDatabase";
