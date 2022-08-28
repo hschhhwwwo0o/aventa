@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-function TheNotification() {
+function TheNotification(): JSX.Element {
   return <Fragment></Fragment>;
 }
 

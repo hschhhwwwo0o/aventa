@@ -1,5 +1,7 @@
+import { en } from "./en";
+
 const localization = {
-  en: {},
+  en: en,
 };
 
 Object.freeze(localization);

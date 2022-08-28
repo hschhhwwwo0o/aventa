@@ -1,7 +1,22 @@
 import { Fragment } from "react";
 
+/** Layouts */
+import { BGLayout } from "@layouts/BGLayout";
+import { DefaultLayout } from "@layouts/DefaultLayout";
+
+/** Hooks */
+import { useNavigationTabs } from "@hooks/navigation/useNavigationTabs";
+
 function AboutScreen({ navigation, route }: IScreen): JSX.Element {
-  return <Fragment></Fragment>;
+  useNavigationTabs(true);
+
+  return (
+    <Fragment>
+      <BGLayout type="B">
+        <DefaultLayout></DefaultLayout>
+      </BGLayout>
+    </Fragment>
+  );
 }
 
 export { AboutScreen };

@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-function TheHeader() {
+function TheHeader(): JSX.Element {
   return <Fragment></Fragment>;
 }
 
