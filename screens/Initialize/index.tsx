@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 
 /** Layouts */
 import { BGLayout } from "@layouts/BGLayout";
@@ -23,8 +23,17 @@ function InitializeScreen({ navigation, route }: IScreen): JSX.Element {
   /** Detect initilize application flag */
   const isInitialize: boolean | "loading" = useIsInitializeApplication();
 
-  if (isInitialize === true) navigation.navigate("MainScreen");
-  if (isInitialize === false) navigation.navigate("Welcome/InitialScreen");
+  useEffect(
+    function navigateToApplication(): void {
+      if (isInitialize === true) {
+        navigation.navigate("MainScreen");
+      }
+      if (isInitialize === false) {
+        navigation.navigate("Welcome/InitialScreen");
+      }
+    },
+    [isInitialize]
+  );
 
   return (
     <Fragment>

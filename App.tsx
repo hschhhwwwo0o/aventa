@@ -13,7 +13,15 @@ import AndroidSafeArea from "@styles/AndroidSafeArea";
 /** Global Components */
 import NavigationTabs from "@components/global/NavigationTabs";
 
+/** Hooks */
+import { useLoadFonts } from "@hooks/shared/useLoadFonts";
+
 export default function App(): JSX.Element {
+  /** Loading fonts */
+  const isLoadedFonts: boolean = useLoadFonts();
+
+  if (!isLoadedFonts) return <Fragment />;
+
   return (
     <Fragment>
       <StatusBar style="auto" />
