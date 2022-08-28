@@ -7,7 +7,7 @@ import { MetaLayout } from "@layouts/MetaLayout";
 function WelcomeInitialScreen({ navigation, route }: IScreen): JSX.Element {
   return (
     <Fragment>
-      <BGLayout type="A">
+      <BGLayout type="A3">
         <MetaLayout></MetaLayout>
       </BGLayout>
     </Fragment>

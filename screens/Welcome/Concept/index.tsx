@@ -7,7 +7,7 @@ import { MetaLayout } from "@layouts/MetaLayout";
 function WelcomeConceptScreen({ navigation, route }: IScreen): JSX.Element {
   return (
     <Fragment>
-      <BGLayout type="A">
+      <BGLayout type="A2">
         <MetaLayout></MetaLayout>
       </BGLayout>
     </Fragment>
