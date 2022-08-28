@@ -16,12 +16,25 @@ import { useLoadFonts } from "@hooks/shared/useLoadFonts";
 /** Styles */
 import AndroidSafeArea from "@styles/AndroidSafeArea";
 
+/** SQL */
+import { initializeSQLiteTables } from "@sql/initializeTables.sqlite";
+
 /**
- * The main component of the application
- * configuration.
+ * The global component `App` is used for the
+ * first stage of loading an application.
+ *
+ * Note that this screen is the first step in loading the
+ * application. The 2nd stage of loading
+ * takes place in `@screens/Initialize`
  */
 export default function App(): JSX.Element {
-  /** Loading fonts */
+  /**
+   * Initialization of database tables when the application
+   * is run for the first time
+   */
+  initializeSQLiteTables();
+
+  /** Preparing and downloading local fonts */
   const isLoadedFonts: boolean = useLoadFonts();
 
   if (!isLoadedFonts) {

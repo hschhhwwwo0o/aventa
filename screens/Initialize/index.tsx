@@ -1,4 +1,4 @@
-import { Fragment, useEffect } from "react";
+import { useEffect } from "react";
 
 /** Layouts */
 import { BGLayout } from "@layouts/BGLayout";
@@ -9,16 +9,17 @@ import { useNavigationTabs } from "@hooks/navigation/useNavigationTabs";
 import { useIsInitializeApplication } from "@hooks/shared/useIsInitializeApplication";
 
 /**
+ * The screen is the second stage of loading the application
+ *
  * The screen is used to initialize
- * the navigation
- * and application
+ * the navigation and application.
  */
 function InitializeScreen({ navigation, route }: IScreen): JSX.Element {
-  /** Initialize navigate function */
-  useInitializeNavigationTabs(navigation.navigate);
-
   /** Hide navigation tabs */
   useNavigationTabs(false);
+
+  /** Initialize navigate function */
+  useInitializeNavigationTabs(navigation.navigate);
 
   /** Detect initilize application flag */
   const isInitialize: boolean | "loading" = useIsInitializeApplication();
@@ -35,11 +36,7 @@ function InitializeScreen({ navigation, route }: IScreen): JSX.Element {
     [isInitialize]
   );
 
-  return (
-    <Fragment>
-      <BGLayout />
-    </Fragment>
-  );
+  return <BGLayout />;
 }
 
 export { InitializeScreen };
