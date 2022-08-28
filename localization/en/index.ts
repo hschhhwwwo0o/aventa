@@ -1,3 +1,6 @@
-const en = {};
+const en = {
+  global: {},
+  screens: {},
+};
 
 export { en };
