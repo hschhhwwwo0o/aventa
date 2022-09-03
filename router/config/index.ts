@@ -3,12 +3,14 @@ import type { NativeStackNavigationOptions } from "@react-navigation/native-stac
 import { IRoute } from "./types";
 
 /** Screens */
-import { InitializeScreen } from "~/screens/Initialize";
-import { MainScreen } from "~/screens/Main";
-import { AboutScreen } from "~/screens/About";
-import { LoadingScreen } from "~/screens/Loading";
-import { TransactionsScreen } from "~/screens/Transactions";
-import { AddGoalScreen } from "~/screens/AddGoal";
+import { InitializeScreen } from "~/screens/Service/Initialize";
+import { LoadingScreen } from "~/screens/Service/Loading";
+
+import { HomeScreen } from "~/screens/Main/Home";
+import { AboutScreen } from "~/screens/Main/About";
+import { TransactionsScreen } from "~/screens/Main/Transactions";
+import { AddGoalScreen } from "~/screens/Main/AddGoal";
+
 import { WelcomeInitialScreen } from "~/screens/Welcome/Initial";
 import { WelcomeConceptScreen } from "~/screens/Welcome/Concept";
 import { WelcomeMeetScreen } from "~/screens/Welcome/Meet";
@@ -17,28 +19,29 @@ import { WelcomeAddGoalScreen } from "~/screens/Welcome/AddGoal";
 /** Application routes */
 const routes: IRoute[] = [
   /** Init screen */
-  { name: "InitializeScreen", component: InitializeScreen },
-
-  /** Main screens */
-  { name: "MainScreen", component: MainScreen },
-  { name: "LoadingScreen", component: LoadingScreen },
-  { name: "TransactionsScreen", component: TransactionsScreen },
-  { name: "AddGoalScreen", component: AddGoalScreen },
-  { name: "AboutScreen", component: AboutScreen },
+  { name: "Service/Initialize", component: InitializeScreen },
+  { name: "Service/Loading", component: LoadingScreen },
 
   /** Welcome screens */
-  { name: "Welcome/InitialScreen", component: WelcomeInitialScreen },
-  { name: "Welcome/ConceptScreen", component: WelcomeConceptScreen },
-  { name: "Welcome/MeetScreen", component: WelcomeMeetScreen },
-  { name: "Welcome/AddGoalScreen", component: WelcomeAddGoalScreen },
+  { name: "Welcome/Initial", component: WelcomeInitialScreen },
+  { name: "Welcome/Concept", component: WelcomeConceptScreen },
+  { name: "Welcome/Meet", component: WelcomeMeetScreen },
+  { name: "Welcome/AddGoal", component: WelcomeAddGoalScreen },
+
+  /** Main app screens */
+  { name: "Main/Home", component: HomeScreen },
+  { name: "Main/Transactions", component: TransactionsScreen },
+  { name: "Main/AddGoal", component: AddGoalScreen },
+  { name: "Main/About", component: AboutScreen },
 ];
 
+/** Shared screen options */
 const screenOptions: NativeStackNavigationOptions = {
   headerShown: false,
 };
 
 /** Application preloading screen name */
-const INITIAL_ROUTE_NAME: string = "InitializeScreen";
+const INITIAL_ROUTE_NAME: string = "Service/Initialize";
 
 /** Application preloading screen */
 const initialRoute: IRoute =

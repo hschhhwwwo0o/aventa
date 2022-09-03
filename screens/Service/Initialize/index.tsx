@@ -27,10 +27,10 @@ function InitializeScreen({ navigation, route }: IScreen): JSX.Element {
   useEffect(
     function navigateToApplication(): void {
       if (isInitialize === true) {
-        navigation.navigate("MainScreen");
+        navigation.navigate("Main/Home");
       }
       if (isInitialize === false) {
-        navigation.navigate("Welcome/InitialScreen");
+        navigation.navigate("Welcome/Initial");
       }
     },
     [isInitialize]
