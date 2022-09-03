@@ -46,4 +46,4 @@ const initialRoute: IRoute =
     return route.name === INITIAL_ROUTE_NAME;
   }) || routes[0];
 
-export { routes, initialRoute, INITIAL_ROUTE_NAME };
+export { routes, initialRoute, INITIAL_ROUTE_NAME, screenOptions };
