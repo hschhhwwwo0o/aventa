@@ -5,14 +5,10 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 /** Router config */
-import { initialRoute, INITIAL_ROUTE_NAME, routes } from "./config";
+import { initialRoute, INITIAL_ROUTE_NAME, routes, screenOptions } from "./config";
 
 function Router(): JSX.Element {
   const Stack = createNativeStackNavigator();
-
-  const screenOptions = {
-    headerShown: false,
-  };
 
   return (
     <Fragment>

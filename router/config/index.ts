@@ -1,3 +1,5 @@
+import type { NativeStackNavigationOptions } from "@react-navigation/native-stack";
+
 import { IRoute } from "./types";
 
 /** Screens */
@@ -30,6 +32,10 @@ const routes: IRoute[] = [
   { name: "Welcome/MeetScreen", component: WelcomeMeetScreen },
   { name: "Welcome/AddGoalScreen", component: WelcomeAddGoalScreen },
 ];
+
+const screenOptions: NativeStackNavigationOptions = {
+  headerShown: false,
+};
 
 /** Application preloading screen name */
 const INITIAL_ROUTE_NAME: string = "InitializeScreen";
