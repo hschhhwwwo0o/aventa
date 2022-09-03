@@ -5,7 +5,7 @@ import { Text, View } from "react-native";
 
 /** Global store */
 import { observer } from "mobx-react-lite";
-import { NavigationTabsStore } from "@store/NavigationTabs";
+import { NavigationTabsStore } from "~/store/NavigationTabs";
 
 function NavigationTabs(): JSX.Element {
   return (
