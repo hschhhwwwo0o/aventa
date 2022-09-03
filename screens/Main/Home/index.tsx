@@ -7,7 +7,7 @@ import { DefaultLayout } from "~/layouts/DefaultLayout";
 /** Hooks */
 import { useNavigationTabs } from "~/hooks/navigation/useNavigationTabs";
 
-function MainScreen({ navigation, route }: IScreen): JSX.Element {
+function HomeScreen({ navigation, route }: IScreen): JSX.Element {
   useNavigationTabs(true);
 
   return (
@@ -19,4 +19,4 @@ function MainScreen({ navigation, route }: IScreen): JSX.Element {
   );
 }
 
-export { MainScreen };
+export { HomeScreen };
