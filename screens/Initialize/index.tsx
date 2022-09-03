@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 
 /** Layouts */
-import { BGLayout } from "@layouts/BGLayout";
+import { BGLayout } from "~/layouts/BGLayout";
 
 /** Hooks */
-import { useInitializeNavigationTabs } from "@hooks/navigation/useInitializeNavigationTabs";
-import { useNavigationTabs } from "@hooks/navigation/useNavigationTabs";
-import { useIsInitializeApplication } from "@hooks/shared/useIsInitializeApplication";
+import { useInitializeNavigationTabs } from "~/hooks/navigation/useInitializeNavigationTabs";
+import { useNavigationTabs } from "~/hooks/navigation/useNavigationTabs";
+import { useIsInitializeApplication } from "~/hooks/shared/useIsInitializeApplication";
 
 /**
  * The screen is the second stage of loading the application

@@ -3,16 +3,16 @@ import type { NativeStackNavigationOptions } from "@react-navigation/native-stac
 import { IRoute } from "./types";
 
 /** Screens */
-import { InitializeScreen } from "@screens/Initialize";
-import { MainScreen } from "@screens/Main";
-import { AboutScreen } from "@screens/About";
-import { LoadingScreen } from "@screens/Loading";
-import { TransactionsScreen } from "@screens/Transactions";
-import { AddGoalScreen } from "@screens/AddGoal";
-import { WelcomeInitialScreen } from "@screens/Welcome/Initial";
-import { WelcomeConceptScreen } from "@screens/Welcome/Concept";
-import { WelcomeMeetScreen } from "@screens/Welcome/Meet";
-import { WelcomeAddGoalScreen } from "@screens/Welcome/AddGoal";
+import { InitializeScreen } from "~/screens/Initialize";
+import { MainScreen } from "~/screens/Main";
+import { AboutScreen } from "~/screens/About";
+import { LoadingScreen } from "~/screens/Loading";
+import { TransactionsScreen } from "~/screens/Transactions";
+import { AddGoalScreen } from "~/screens/AddGoal";
+import { WelcomeInitialScreen } from "~/screens/Welcome/Initial";
+import { WelcomeConceptScreen } from "~/screens/Welcome/Concept";
+import { WelcomeMeetScreen } from "~/screens/Welcome/Meet";
+import { WelcomeAddGoalScreen } from "~/screens/Welcome/AddGoal";
 
 /** Application routes */
 const routes: IRoute[] = [

@@ -1,7 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 /** Constants */
-import { IS_INITIALIZE_STORAGE_KEY } from "@constants/shared/initialize";
+import { IS_INITIALIZE_STORAGE_KEY } from "~/constants/shared/initialize";
 
 export async function getIsInitializeFlagInStorage(): Promise<boolean> {
   try {

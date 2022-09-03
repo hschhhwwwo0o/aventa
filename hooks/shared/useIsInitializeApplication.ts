@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 /** Utils */
-import { getIsInitializeFlagInStorage } from "@utils/initialize/getIsInitializeFlagInStorage";
+import { getIsInitializeFlagInStorage } from "~/utils/initialize/getIsInitializeFlagInStorage";
 
 function useIsInitializeApplication(): boolean | "loading" {
   const [isInitialize, setIsInitialize] = useState<boolean | "loading">("loading");
