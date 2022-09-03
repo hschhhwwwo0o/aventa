@@ -7,7 +7,7 @@ import { ImageBackground, View } from "react-native";
 import styles from "./styles";
 
 /** Images */
-import { BackgroundTypeA, BackgroundTypeA2, BackgroundTypeA3, BackgroundTypeB } from "@constants/backgrounds";
+import { BackgroundTypeA, BackgroundTypeA2, BackgroundTypeA3, BackgroundTypeB } from "@styles/constants/backgrounds";
 
 interface IBGLayoutProps {
   children?: ReactNode;
