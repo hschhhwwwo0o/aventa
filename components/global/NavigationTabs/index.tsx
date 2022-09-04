@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import React, { Fragment } from "react";
 
 /** Elements */
 import { Text, View } from "react-native";
@@ -7,7 +7,7 @@ import { Text, View } from "react-native";
 import { observer } from "mobx-react-lite";
 import { NavigationTabsStore } from "~/store/NavigationTabs";
 
-function NavigationTabs(): JSX.Element {
+function NavigationTabsView(): JSX.Element {
   return (
     <Fragment>
       {NavigationTabsStore.isVisible && (
@@ -21,4 +21,7 @@ function NavigationTabs(): JSX.Element {
   );
 }
 
-export default observer(NavigationTabs);
+/** Connected to store */
+const NavigationTabs = observer(NavigationTabsView);
+
+export { NavigationTabs };
