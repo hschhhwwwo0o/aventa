@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import React, { Fragment } from "react";
 
 function TheHeader(): JSX.Element {
   return <Fragment></Fragment>;

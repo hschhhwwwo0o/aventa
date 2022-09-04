@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 
-function TextXL(): JSX.Element {
+function TextXS(): JSX.Element {
   return <Fragment></Fragment>;
 }
 
-export { TextXL };
+export { TextXS };
