@@ -28,5 +28,4 @@ Design instruments: [Figma]
 
 Made with love ❤️
 
-I'm on Behance: **https://www.behance.net/hschhhwwwo0o** \
-I'm on Dribbble: **https://dribbble.com/ssandry0**
+I'm on Behance: **https://www.behance.net/hschhhwwwo0o**
