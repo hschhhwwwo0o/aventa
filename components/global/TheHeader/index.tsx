@@ -5,7 +5,7 @@ import { TouchableOpacity, View } from "react-native";
 import styles from "./styles";
 
 /** Components */
-import { TextLG } from "~/components/text/TextLG";
+import { TextLogo } from "~/components/ui/TextLogo";
 
 /** Local components */
 import { _NavigateBack } from "./components/_NavigateBack";
@@ -18,13 +18,17 @@ function TheHeader({ isBack = false }: ITheHeaderProps): JSX.Element {
   return (
     <Fragment>
       <View style={styles.container}>
-        <View style={styles.side}>{isBack && <_NavigateBack />}</View>
+        <View style={styles.side}>
+          <Fragment>{isBack && <_NavigateBack />}</Fragment>
+        </View>
         <View style={{ marginTop: -5 }}>
           <TouchableOpacity activeOpacity={0.8}>
-            <TextLG>Aventa</TextLG>
+            <TextLogo />
           </TouchableOpacity>
         </View>
-        <View style={styles.side}></View>
+        <View style={styles.side}>
+          <Fragment></Fragment>
+        </View>
       </View>
     </Fragment>
   );
