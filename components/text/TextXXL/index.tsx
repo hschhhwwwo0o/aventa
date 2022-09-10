@@ -4,10 +4,15 @@ import { Text } from "react-native";
 /** Styles */
 import styles from "./styles";
 
-function TextXXL({ children }: { children: ReactNode }): JSX.Element {
+interface IText {
+  children: ReactNode;
+  center?: boolean;
+}
+
+function TextXXL({ children, center = false }: IText): JSX.Element {
   return (
     <Fragment>
-      <Text style={styles.textXXL}>{children}</Text>
+      <Text style={[styles.textXXL, center === true && { textAlign: "center" }]}>{children}</Text>
     </Fragment>
   );
 }

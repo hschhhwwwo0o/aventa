@@ -4,6 +4,7 @@ import { MAIN_FONT } from "~/styles/constants/fonts";
 export default StyleSheet.create({
   textLG: {
     fontFamily: MAIN_FONT.medium,
-    fontSize: 20,
+    fontSize: 18,
+    color: "white",
   },
 });

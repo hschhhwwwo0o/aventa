@@ -4,6 +4,7 @@ import { MAIN_FONT } from "~/styles/constants/fonts";
 export default StyleSheet.create({
   textXS: {
     fontFamily: MAIN_FONT.medium,
-    fontSize: 12,
+    fontSize: 11,
+    color: "white",
   },
 });
