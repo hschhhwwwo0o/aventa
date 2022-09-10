@@ -4,12 +4,12 @@ import { Text } from "react-native";
 /** Styles */
 import styles from "./styles";
 
-function TextXS({ children }: { children: ReactNode }): JSX.Element {
+function TextSM({ children }: { children: ReactNode }): JSX.Element {
   return (
     <Fragment>
-      <Text style={styles.textXS}>{children}</Text>
+      <Text style={styles.textSM}>{children}</Text>
     </Fragment>
   );
 }
 
-export { TextXS };
+export { TextSM };

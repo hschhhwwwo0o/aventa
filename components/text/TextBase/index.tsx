@@ -1,7 +1,15 @@
-import React, { Fragment } from "react";
+import React, { Fragment, ReactNode } from "react";
+import { Text } from "react-native";
 
-function TextBase(): JSX.Element {
-  return <Fragment></Fragment>;
+/** Styles */
+import styles from "./styles";
+
+function TextBase({ children }: { children: ReactNode }): JSX.Element {
+  return (
+    <Fragment>
+      <Text style={styles.textBase}>{children}</Text>
+    </Fragment>
+  );
 }
 
 export { TextBase };
