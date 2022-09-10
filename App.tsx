@@ -15,6 +15,7 @@ import { useLoadFonts } from "~/hooks/shared/useLoadFonts";
 
 /** Styles */
 import AndroidSafeArea from "~/styles/shared/AndroidSafeArea";
+import { COLORS } from "./styles/constants/colors";
 
 /** SQL */
 import { initializeSQLiteTables } from "~/sql/initializeTables.sqlite";
@@ -42,7 +43,7 @@ export default function App(): JSX.Element {
   } else {
     return (
       <Fragment>
-        <StatusBar style="auto" />
+        <StatusBar backgroundColor={COLORS.bg} style="light" />
         {
           /** Screen body */
           <Fragment>
