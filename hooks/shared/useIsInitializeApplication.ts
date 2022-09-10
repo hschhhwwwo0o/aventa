@@ -8,8 +8,12 @@ function useIsInitializeApplication(): boolean | "loading" {
 
   useEffect(function (): void {
     (async function detectIsInitializeFlag(): Promise<void> {
-      const storedFlag: boolean = await getIsInitializeFlagInStorage();
-      setIsInitialize(storedFlag);
+      try {
+        const storedFlag: boolean = await getIsInitializeFlagInStorage();
+        setIsInitialize(storedFlag);
+      } catch (error) {
+        console.error(error);
+      }
     })();
   }, []);
 

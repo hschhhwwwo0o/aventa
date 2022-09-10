@@ -1,4 +1,4 @@
-export const mainFont = Object.freeze({
+export const MAIN_FONT = Object.freeze({
   bold: "Poppins-Bold",
   black: "Poppins-Black",
   extraBold: "Poppins-ExtraBold",
