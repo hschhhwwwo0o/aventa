@@ -23,7 +23,10 @@ function Router(): JSX.Element {
               <Stack.Group screenOptions={screenOptions} key={routeGroup.name}>
                 {routeGroup.routes.map(function renderRoutes(route): JSX.Element {
                   return (
-                    /** Generate screens */
+                    /**
+                     * Generate screens.
+                     * @see https://reactnavigation.org/docs/screen
+                     */
                     <Stack.Screen
                       key={route.name}
                       /**
