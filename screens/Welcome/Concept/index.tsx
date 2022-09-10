@@ -9,6 +9,7 @@ import { BGLayout } from "~/layouts/BGLayout";
 import { TapForContinueLayout } from "~/layouts/TapForContinueLayout";
 
 /** Components */
+import { TheHeader } from "~/components/global/TheHeader";
 import { TextXXL } from "~/components/text/TextXXL";
 import { TextLG } from "~/components/text/TextLG";
 
@@ -16,11 +17,8 @@ function WelcomeConceptScreen({ navigation, route }: IScreen): JSX.Element {
   return (
     <Fragment>
       <BGLayout type="A3">
-        <TapForContinueLayout
-          nextScreen="Welcome/Meet"
-          headerOptions={{ isBack: true }}
-          styleOptions={{ withTopPadding: true }}
-        >
+        <TheHeader />
+        <TapForContinueLayout nextScreen="Welcome/Meet" styleOptions={{ withTopPadding: true, withTapHint: true }}>
           <View>
             <TextXXL center>{i18n.t("Screens.Welcome.Concept['The concept']")}</TextXXL>
           </View>
