@@ -44,14 +44,14 @@ export default function App(): JSX.Element {
     return (
       <Fragment>
         <StatusBar backgroundColor={COLORS.bg} style="light" />
-        {
-          /** Screen body */
-          <Fragment>
-            <SafeAreaView style={AndroidSafeArea.container}>
+        <Fragment>
+          <SafeAreaView style={AndroidSafeArea.container}>
+            {
+              /** Screen body */
               <Router />
-            </SafeAreaView>
-          </Fragment>
-        }
+            }
+          </SafeAreaView>
+        </Fragment>
         {
           /** Navigation bar for switching tabs */
           <Fragment>

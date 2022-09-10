@@ -53,6 +53,7 @@ const routesGroups: IRoutesGroup[] = [
 /** Shared screen options */
 const screenOptions: NativeStackNavigationOptions = {
   headerShown: false,
+  animation: "fade",
 };
 
 /** Application preloading screen name */

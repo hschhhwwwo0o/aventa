@@ -21,7 +21,7 @@ function TheHeader({ isBack = false }: ITheHeaderProps): JSX.Element {
         <View style={styles.side}>
           <Fragment>{isBack && <_NavigateBack />}</Fragment>
         </View>
-        <View style={{ marginTop: -5 }}>
+        <View style={{ marginTop: -5, zIndex: 100 }}>
           <TouchableOpacity activeOpacity={0.8}>
             <TextLogo />
           </TouchableOpacity>
