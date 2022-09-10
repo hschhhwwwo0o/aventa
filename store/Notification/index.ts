@@ -18,7 +18,9 @@ class Notification {
 
     /** Hide notification */
     runInAction(() => {
-      this.isOpen = false;
+      setTimeout(() => {
+        this.isOpen = false;
+      }, 4000);
     });
   }
 }
