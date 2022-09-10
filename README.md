@@ -24,8 +24,4 @@ Design instruments: [Figma]
 [sqlite]: https://www.sqlite.org/index.html
 [typescript]: https://www.typescriptlang.org/
 
-<br />
-
 Made with love ❤️
-
-I'm on Behance: **https://www.behance.net/hschhhwwwo0o**
