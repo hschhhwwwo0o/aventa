@@ -5,7 +5,7 @@ import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native";
 
 /** Global components */
-import NavigationTabs from "~/components/global/NavigationTabs";
+import { NavigationTabs } from "~/components/global/NavigationTabs";
 
 /** Router */
 import { Router } from "~/router/index";
@@ -14,7 +14,7 @@ import { Router } from "~/router/index";
 import { useLoadFonts } from "~/hooks/shared/useLoadFonts";
 
 /** Styles */
-import AndroidSafeArea from "~/styles/AndroidSafeArea";
+import AndroidSafeArea from "~/styles/shared/AndroidSafeArea";
 
 /** SQL */
 import { initializeSQLiteTables } from "~/sql/initializeTables.sqlite";
