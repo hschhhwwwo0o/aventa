@@ -17,7 +17,7 @@ function WelcomeConceptScreen({ navigation, route }: IScreen): JSX.Element {
   return (
     <Fragment>
       <BGLayout type="A3">
-        <TheHeader />
+        <TheHeader isBack />
         <TapForContinueLayout nextScreen="Welcome/Meet" styleOptions={{ withTopPadding: true, withTapHint: true }}>
           <View>
             <TextXXL center>{i18n.t("Screens.Welcome.Concept['The concept']")}</TextXXL>
