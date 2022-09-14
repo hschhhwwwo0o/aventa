@@ -8,7 +8,7 @@ import { BGLayout } from "~/layouts/BGLayout";
 import { DefaultLayout } from "~/layouts/DefaultLayout";
 
 /** Components */
-import { TheHeader } from "~/components/global/TheHeader";
+import { TheHeader } from "~/components/ui/TheHeader";
 
 function AboutScreen({ navigation, route }: IScreen): JSX.Element {
   useNavigationTabs(true);
