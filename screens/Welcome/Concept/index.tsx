@@ -9,7 +9,7 @@ import { BGLayout } from "~/layouts/BGLayout";
 import { TapForContinueLayout } from "~/layouts/TapForContinueLayout";
 
 /** Components */
-import { TheHeader } from "~/components/global/TheHeader";
+import { TheHeader } from "~/components/ui/TheHeader";
 import { TextXXL } from "~/components/text/TextXXL";
 import { TextLG } from "~/components/text/TextLG";
 
