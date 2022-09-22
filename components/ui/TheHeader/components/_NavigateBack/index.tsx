@@ -5,7 +5,7 @@ import { TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 /** Icons */
-import { BackArrow } from "~/icons/BackArrow";
+import { BackArrow } from "~/components/icons/BackArrow";
 import styles from "./styles";
 
 function _NavigateBack(): JSX.Element {
