@@ -16,7 +16,7 @@
       "~/screens/*": ["screens/*"],
       "~/store/*": ["store/*"],
       "~/types/*": ["types/*"],
-      "~/sql/*": ["sql/*"],
+      "~/databases/*": ["databases/*"],
       "~/utils/*": ["utils/*"],
       "~/assets/*": ["assets/*"],
       "~/constants/*": ["constants/*"],
