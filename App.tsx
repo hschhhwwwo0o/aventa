@@ -1,11 +1,7 @@
 import { Fragment } from "react";
 
-/** Elements */
-import { StatusBar } from "expo-status-bar";
-import { SafeAreaView } from "react-native";
-
-/** Global components */
-import { NavigationTabs } from "~/components/global/NavigationTabs";
+/** SQLite */
+import { SQLiteClient } from "./databases/sqlite/client";
 
 /** Router */
 import { Router } from "~/router/index";
@@ -13,12 +9,16 @@ import { Router } from "~/router/index";
 /** Hooks */
 import { useLoadFonts } from "~/hooks/shared/useLoadFonts";
 
+/** Elements */
+import { StatusBar } from "expo-status-bar";
+import { SafeAreaView } from "react-native";
+
+/** Global components */
+import { NavigationTabs } from "~/components/global/NavigationTabs";
+
 /** Styles */
 import AndroidSafeArea from "~/styles/shared/AndroidSafeArea";
 import { COLORS } from "./styles/constants/colors";
-
-/** SQL */
-import { initializeSQLiteTables } from "~/sql/initializeTables.sqlite";
 
 /**
  * The global component `App` is used for the
@@ -33,9 +33,9 @@ export default function App(): JSX.Element {
    * Initialization of database tables when the application
    * is run for the first time
    */
-  initializeSQLiteTables();
+  SQLiteClient.initialize();
 
-  /** Preparing and downloading local fonts */
+  /** Preparing and downloading fonts */
   const isLoadedFonts: boolean = useLoadFonts();
 
   if (!isLoadedFonts) {

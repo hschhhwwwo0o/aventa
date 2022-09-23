@@ -18,7 +18,7 @@ module.exports = function (api) {
             "~/hooks": "./hooks",
             "~/constants": "./constants",
             "~/store": "./store",
-            "~/sql": "./sql",
+            "~/databases": "./databases",
             "~/layouts": "./layouts",
             "~/types": "./types",
             "~/localization": "./localization",
