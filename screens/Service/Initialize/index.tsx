@@ -5,35 +5,52 @@ import { BGLayout } from "~/layouts/BGLayout";
 
 /** Hooks */
 import { useInitializeNavigationTabs } from "~/hooks/navigation/useInitializeNavigationTabs";
+import { useIsInitializedApplication } from "~/hooks/shared/useIsInitializedApplication";
 import { useNavigationTabs } from "~/hooks/navigation/useNavigationTabs";
-import { useIsInitializeApplication } from "~/hooks/shared/useIsInitializeApplication";
 
 /**
- * The screen is the second stage of loading the application
+ * The screen is the second stage of initialize the application
  *
- * The screen is used to initialize
- * the navigation and application.
+ * The screen is used to initialize the navigation
+ * and application.
  */
 function InitializeScreen({ navigation, route }: IScreen): JSX.Element {
+  /**
+   * Detecting the first login to the application
+   *
+   * The function searches the local storage for the flag
+   * responsible for initialization.
+   *
+   * The flag is necessary to navigate a new user to the
+   * welcome screens
+   */
+  const isUserInitialized: boolean | "loading" = useIsInitializedApplication();
+
+  /** Initialize navigation tabs */
+  useInitializeNavigationTabs(navigation.navigate);
+
   /** Hide navigation tabs */
   useNavigationTabs(false);
 
-  /** Initialize navigate function */
-  useInitializeNavigationTabs(navigation.navigate);
-
-  /** Detect initilize application flag */
-  const isInitialize: boolean | "loading" = useIsInitializeApplication();
-
   useEffect(
     function navigateToApplication(): void {
-      if (isInitialize === true) {
-        navigation.navigate("Main/Home");
-      }
-      if (isInitialize === false) {
-        navigation.navigate("Welcome/Initial");
+      switch (isUserInitialized) {
+        case "loading":
+          break;
+
+        case true:
+          navigation.navigate("Main/Home");
+          break;
+
+        case false:
+          navigation.navigate("Welcome/Initial");
+          break;
+
+        default:
+          break;
       }
     },
-    [isInitialize]
+    [isUserInitialized]
   );
 
   return <BGLayout />;
