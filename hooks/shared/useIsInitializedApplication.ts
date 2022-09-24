@@ -3,7 +3,16 @@ import { useEffect, useState } from "react";
 /** Utils */
 import { getIsInitializeFlagInStorage } from "~/utils/initialize/getIsInitializeFlagInStorage";
 
-function useIsInitializeApplication(): boolean | "loading" {
+/**
+ * Detecting the first login to the application
+ *
+ * The function searches the local storage for the flag
+ * responsible for initialization.
+ *
+ * The flag is necessary to redirect a new user to the
+ * welcome screens
+ */
+function useIsInitializedApplication(): boolean | "loading" {
   const [isInitialize, setIsInitialize] = useState<boolean | "loading">("loading");
 
   useEffect(function (): void {
@@ -20,4 +29,4 @@ function useIsInitializeApplication(): boolean | "loading" {
   return isInitialize;
 }
 
-export { useIsInitializeApplication };
+export { useIsInitializedApplication };
