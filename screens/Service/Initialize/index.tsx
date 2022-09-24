@@ -11,8 +11,9 @@ import { useNavigationTabs } from "~/hooks/navigation/useNavigationTabs";
 /**
  * The screen is the second stage of initialize the application
  *
- * The screen is used to initialize the navigation
- * and application.
+ * Note that this screen is the second step in loading the
+ * application. The 1nd stage of loading
+ * takes place in `App.tsx`
  */
 function InitializeScreen({ navigation, route }: IScreen): JSX.Element {
   /**
@@ -24,7 +25,7 @@ function InitializeScreen({ navigation, route }: IScreen): JSX.Element {
    * The flag is necessary to navigate a new user to the
    * welcome screens
    */
-  const isUserInitialized: boolean | "loading" = useIsInitializedApplication();
+  const isInitializedApplication: boolean | "loading" = useIsInitializedApplication();
 
   /** Initialize navigation tabs */
   useInitializeNavigationTabs(navigation.navigate);
@@ -34,7 +35,7 @@ function InitializeScreen({ navigation, route }: IScreen): JSX.Element {
 
   useEffect(
     function navigateToApplication(): void {
-      switch (isUserInitialized) {
+      switch (isInitializedApplication) {
         case "loading":
           break;
 
@@ -50,7 +51,7 @@ function InitializeScreen({ navigation, route }: IScreen): JSX.Element {
           break;
       }
     },
-    [isUserInitialized]
+    [isInitializedApplication]
   );
 
   return <BGLayout />;
