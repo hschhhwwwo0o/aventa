@@ -27,10 +27,6 @@ const en = {
       },
       Meet: {},
     },
-    Service: {
-      Initialize: {},
-      Loading: {},
-    },
   },
 };
 
