@@ -2,7 +2,7 @@ import React, { Fragment, ReactNode } from "react";
 import { TouchableOpacity, View } from "react-native";
 
 /** Localization */
-import { i18n } from "~/localization/index";
+import { i18nClient } from "~/localization/client";
 
 /** Navigation */
 import { useNavigation } from "@react-navigation/native";
@@ -27,6 +27,10 @@ function TapForContinueLayout({
   styleOptions = { withTopPadding: false, withTapHint: true },
   nextScreen = "",
 }: ITapForContinueLayoutProps): JSX.Element {
+  const { translate } = i18nClient({
+    prefix: "Global.Shared",
+  });
+
   const navigation = useNavigation();
 
   return (
@@ -40,11 +44,11 @@ function TapForContinueLayout({
           style={styles.containerPressable}
           activeOpacity={0.8}
         >
-          {styleOptions.withTopPadding === true && <View style={styles.topPadding}></View>}
+          {styleOptions.withTopPadding === true && <View style={styles.topPadding} />}
           <View style={styles.body}>{children}</View>
           {styleOptions.withTapHint === true && (
             <View style={styles.continue}>
-              <TextXS>{i18n.t("Global.Shared['Tap the screen to continue']")}</TextXS>
+              <TextXS>{translate("Tap the screen to continue")}</TextXS>
             </View>
           )}
         </TouchableOpacity>

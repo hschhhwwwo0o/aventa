@@ -2,7 +2,7 @@ import * as Localization from "expo-localization";
 import { I18n } from "i18n-js";
 
 /** Languages */
-import { en } from "./en";
+import { en } from "./languages/en";
 
 const localization = Object.freeze({
   en: en,
