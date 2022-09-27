@@ -26,13 +26,13 @@ function i18nClient(config?: II18nConfig) {
     if (config?.prefix && !field.includes(".")) {
       return i18n.t(`${config?.prefix}['${field}']`);
     } else {
-      return gTranslate(field);
+      return i18n.t(field);
     }
   }
 
   /** Global translate */
-  function gTranslate(field: string): string {
-    return i18n.t(field);
+  function gTranslate(prefix: II18nConfig["prefix"], field: string): string {
+    return i18n.t(`${prefix}['${field}']`);
   }
 
   return {
