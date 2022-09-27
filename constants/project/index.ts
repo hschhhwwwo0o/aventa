@@ -1,4 +1,4 @@
-const PROJECT = {
+const PROJECT = Object.freeze({
   name: "Aventa",
   version: "0.01",
   repository: "https://github.com/hschhhwwwo0o/aventa",
@@ -9,8 +9,6 @@ const PROJECT = {
       link: "https://www.behance.net/hschhhwwwo0o",
     },
   ],
-};
-
-Object.freeze(PROJECT);
+});
 
 export { PROJECT };

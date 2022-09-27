@@ -1,4 +1,4 @@
-const COLORS = {
+const COLORS = Object.freeze({
   yellow: "#FFA53F",
   paleYellow: "#FFAB78",
   orange: "#FF1000",
@@ -9,9 +9,9 @@ const COLORS = {
   palePurple: "#CD75CF",
   bg: "#050505",
   lowGray: "#4B4B4B",
-};
+});
 
-const SELECTABLE_COLORS = {
+const SELECTABLE_COLORS = Object.freeze({
   yellow: "#FFA53F",
   paleYellow: "#FFAB78",
   orange: "#FF1000",
@@ -20,16 +20,12 @@ const SELECTABLE_COLORS = {
   palePurple: "#CD75CF",
   brown: "#E48160",
   paleBrown: "#FFA688",
-};
+});
 
-const GRADIENTS = {
+const GRADIENTS = Object.freeze({
   brand: ["#CD75CF", "#FFA688"],
   yellow: ["#FFA53F", "#FFA688"],
   orange: ["#FFA53F", "#BE4141"],
-};
-
-Object.freeze(COLORS);
-Object.freeze(GRADIENTS);
-Object.freeze(SELECTABLE_COLORS);
+});
 
 export { COLORS, SELECTABLE_COLORS };

@@ -13,3 +13,20 @@ export async function getIsInitializeFlagInStorage(): Promise<boolean> {
     return false;
   }
 }
+
+export async function setIsInitializeFlagInStorage(isInitialize: boolean): Promise<void> {
+  try {
+    await AsyncStorage.setItem(IS_INITIALIZE_STORAGE_KEY, String(isInitialize));
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+/**
+ * Managing the flag responsible for initializing the
+ * application
+ */
+export const initializeFlagStorage = {
+  get: getIsInitializeFlagInStorage,
+  set: setIsInitializeFlagInStorage,
+};

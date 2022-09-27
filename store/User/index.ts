@@ -1,11 +1,11 @@
 import { makeAutoObservable } from "mobx";
 
 class User {
-  public name: string = "";
-
   constructor() {
     makeAutoObservable(this);
   }
+
+  public name: string = "";
 
   public setUser(name: string): void {
     this.name = name;

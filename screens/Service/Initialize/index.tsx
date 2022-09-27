@@ -4,9 +4,11 @@ import { useEffect } from "react";
 import { BGLayout } from "~/layouts/BGLayout";
 
 /** Hooks */
-import { useInitializeNavigationTabs } from "~/hooks/navigation/useInitializeNavigationTabs";
 import { useIsInitializedApplication } from "~/hooks/shared/useIsInitializedApplication";
 import { useNavigationTabs } from "~/hooks/navigation/useNavigationTabs";
+
+/** Global store */
+import { NavigationTabsStore } from "~/store/NavigationTabs";
 
 /**
  * The screen is the second stage of initialize the application
@@ -28,7 +30,7 @@ function InitializeScreen({ navigation, route }: IScreen): JSX.Element {
   const isInitializedApplication: boolean | "loading" = useIsInitializedApplication();
 
   /** Initialize navigation tabs */
-  useInitializeNavigationTabs(navigation.navigate);
+  NavigationTabsStore.init(navigation.navigate);
 
   /** Hide navigation tabs */
   useNavigationTabs(false);
