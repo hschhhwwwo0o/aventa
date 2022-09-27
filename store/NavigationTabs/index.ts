@@ -1,12 +1,12 @@
 import { makeAutoObservable } from "mobx";
 
 class NavigationTabs {
-  public isVisible: boolean = false;
-  public navigate: INavigation["navigate"] | undefined;
-
   constructor() {
     makeAutoObservable(this);
   }
+
+  public isVisible: boolean = false;
+  public navigate: INavigation["navigate"] | undefined;
 
   public init(navigate: INavigation["navigate"]): void {
     this.navigate = navigate;

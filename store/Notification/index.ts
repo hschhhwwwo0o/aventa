@@ -3,13 +3,13 @@ import { makeAutoObservable, runInAction } from "mobx";
 type IStatus = "error" | "successfull";
 
 class Notification {
-  public isOpen: boolean = false;
-  public message: string = "";
-  public status: IStatus = "error";
-
   constructor() {
     makeAutoObservable(this);
   }
+
+  public isOpen: boolean = false;
+  public message: string = "";
+  public status: IStatus = "error";
 
   public notify(status: IStatus, message: string): void {
     this.isOpen = true;
