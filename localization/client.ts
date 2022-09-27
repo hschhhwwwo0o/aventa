@@ -1,10 +1,26 @@
 import { i18n } from "~/localization/i18n";
 
-interface IConfig {
-  prefix?: string;
+interface II18nConfig {
+  prefix?:
+    /** Main screens */
+    | "Screens.Main.Home"
+    | "Screens.Main.Transactions"
+    | "Screens.Main.AddGoal"
+    | "Screens.Main.About"
+
+    /** Welcome screens */
+    | "Screens.Welcome.Initial"
+    | "Screens.Welcome.Concept"
+    | "Screens.Welcome.Meet"
+    | "Screens.Welcome.AddGoal"
+
+    /** Global */
+    | "Global.Tips"
+    | "Global.Navigation"
+    | "Global.Shared";
 }
 
-function i18nClient(config?: IConfig) {
+function i18nClient(config?: II18nConfig) {
   /** Translation using the configured prefix */
   function translate(field: string): string {
     if (config?.prefix && !field.includes(".")) {
