@@ -26,7 +26,7 @@ export async function setIsInitializeFlagInStorage(isInitialize: boolean): Promi
  * Managing the flag responsible for initializing the
  * application
  */
-export const initializeFlagStorage = {
+export const initializeFlagStorageKeyClient = {
   get: getIsInitializeFlagInStorage,
   set: setIsInitializeFlagInStorage,
 };

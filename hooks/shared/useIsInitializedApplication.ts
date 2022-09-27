@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 /** Utils */
-import { initializeFlagStorage } from "~/utils/initialize/initializeFlagStorage";
+import { initializeFlagStorageKeyClient } from "~/utils/initialize/initializeFlagStorageKeyClient";
 
 /**
  * Detecting the first login to the application
@@ -18,7 +18,7 @@ function useIsInitializedApplication(): boolean | "loading" {
   useEffect(function (): void {
     (async function detectIsInitializeFlag(): Promise<void> {
       try {
-        const storedFlag: boolean = await initializeFlagStorage.get();
+        const storedFlag: boolean = await initializeFlagStorageKeyClient.get();
         setIsInitialize(storedFlag);
       } catch (error) {
         console.error(error);
